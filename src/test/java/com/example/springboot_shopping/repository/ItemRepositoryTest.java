@@ -74,4 +74,33 @@ class ItemRepositoryTest {
         }
     }
 
+    @Test
+    @DisplayName("@Query를 이용한 상품 조회 테스트")
+    public void findByItemDetailTest(){
+        this.createItemTest();
+        List<Item> itemList = itemRepository.findByItemDetail("테스트 상품 상세 설명");
+        for(Item item : itemList){
+            System.out.println(item.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("nativeQuery 속성을 이용한 상품 조회 테스트")
+    public void findByItemDetailByNative(){
+        this.createItemTest();
+        List<Item> itemList = itemRepository.findByItemDetailByNative("테스트 상품 상세 설명");
+        for(Item item : itemList){
+            System.out.println(item.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("testCode : 가격이 10005보다 많은 것들")
+    public void testCode(){
+        this.createItemTest();
+        List<Item> itemList = itemRepository.testCode(10005);
+        for(Item item : itemList){
+            System.out.println(item.toString());
+        }
+    }
 }
