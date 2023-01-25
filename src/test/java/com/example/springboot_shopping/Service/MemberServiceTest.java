@@ -1,7 +1,5 @@
 package com.example.springboot_shopping.Service;
 
-import com.example.springboot_shopping.dto.MemberFormDto;
-import com.example.springboot_shopping.entity.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
