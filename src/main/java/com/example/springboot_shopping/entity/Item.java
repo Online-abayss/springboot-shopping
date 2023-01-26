@@ -1,6 +1,5 @@
 package com.example.springboot_shopping.entity;
 
-
 import com.example.springboot_shopping.constant.ItemSellStatus;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,19 +9,18 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="item")
+@Table(name = "item")
 @Getter
 @Setter
 @ToString
 public class Item {
-
     @Id
-    @Column(name="item_id")
+    @Column(name = "item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;       //상품 코드
+    private Long id;//상품코드
 
     @Column(nullable = false, length = 50)
-    private String itemNm; //상품명
+    private String itemNm;//상품이름
 
     @Column(name="price", nullable = false)
     private int price; //가격
@@ -40,5 +38,4 @@ public class Item {
     private LocalDateTime regTime;
 
     private LocalDateTime updateTime;
-
 }

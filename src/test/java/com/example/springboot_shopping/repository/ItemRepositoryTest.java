@@ -122,19 +122,6 @@ class ItemRepositoryTest {
         }
     }
 
-    @Test
-    @DisplayName("testCode : 가격이 10005보다 많은 것들")
-    public void testCode() {
-
-        this.createItemTest();
-        List<Item> itemList = itemRepository.testCode(10005);
-
-        for(Item item : itemList) {
-
-            System.out.println(item.toString());
-
-        }
-    }
 
     @Test
     @DisplayName("Qeurydsl 조회 테스트1")

@@ -17,14 +17,14 @@ import javax.persistence.*;
 public class Member {
 
     @Id
-    @Column(name = "member_Id")
+    @Column(name="member_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
 
     @Column(unique = true)
-    private String email;
+    private String email; //1
 
     private String password;
 
@@ -36,13 +36,21 @@ public class Member {
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder) {
 
         Member member = new Member();
-        member.setName((memberFormDto.getName()));
-        member.setEmail(member.getEmail());
-        member.setAddress(member.address);
+        member.setName(memberFormDto.getName());
+        member.setEmail(memberFormDto.getEmail());
+        member.setAddress(memberFormDto.getAddress());
         String password = passwordEncoder.encode(memberFormDto.getPassword());
         member.setPassword(password);
-        member.setRole(Role.USER);
+        member.setRole(Role.ADMIN);
         return member;
-
     }
+
+
 }
+
+
+//1. 회원이메일을 유일하게 구분해야 하기 때문에, 동일한 데이터베이스에 들어올 수 없도록 unique 속성을 지정
+
+//2.
+
+//참고 자료 -> 백타불여일견 스프링부트와 쇼핑몰 with JPA 저자 변구훈님
