@@ -53,7 +53,6 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-
 }
 
 //1. WebSecurityConfigureerAdapter를 상속받는 클래스에 @EnableWebSecurity 어노테이션을 선언하면 SpringSecurityFilterChain이 자동으로 포함된다.
