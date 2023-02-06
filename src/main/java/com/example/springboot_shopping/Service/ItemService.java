@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class Itemservice {
+public class ItemService {
 
     private final ItemRepository itemRepository;
     private final ItemImgService itemImgService;

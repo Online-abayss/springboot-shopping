@@ -1,6 +1,6 @@
 package com.example.springboot_shopping.controller;
 
-import com.example.springboot_shopping.Service.Itemservice;
+import com.example.springboot_shopping.Service.ItemService;
 import com.example.springboot_shopping.dto.ItemFormDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ItemController {
 
-    private final Itemservice itemservice;
+    private final ItemService itemservice;
 
     @GetMapping(value = "/admin/item/new")
     public String itemForm(Model model){
