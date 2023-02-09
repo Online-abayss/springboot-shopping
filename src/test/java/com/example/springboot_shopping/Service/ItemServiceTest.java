@@ -6,6 +6,7 @@ import com.example.springboot_shopping.entity.Item;
 import com.example.springboot_shopping.entity.ItemImg;
 import com.example.springboot_shopping.repository.ItemImgRepository;
 import com.example.springboot_shopping.repository.ItemRepository;
+import com.example.springboot_shopping.service.ItemService;
 import groovy.util.logging.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
