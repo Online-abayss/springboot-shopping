@@ -14,15 +14,14 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Item extends BaseEntity {
-
+public class Item extends BaseEntity{
     @Id
-    @Column(name="item_id")
+    @Column(name = "item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;       //상품 코드
+    private Long id;//상품코드
 
     @Column(nullable = false, length = 50)
-    private String itemNm; //상품명
+    private String itemNm;//상품이름
 
     @Column(name="price", nullable = false)
     private int price; //가격
@@ -37,12 +36,14 @@ public class Item extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private ItemSellStatus itemSellStatus; //상품 판매 상태
 
-    public void updateItem(ItemFormDto itemFormDto){
+    public void updateItem(ItemFormDto itemFormDto) {
+
         this.itemNm = itemFormDto.getItemNm();
         this.price = itemFormDto.getPrice();
         this.stockNumber = itemFormDto.getStockNumber();
         this.itemDetail = itemFormDto.getItemDetail();
         this.itemSellStatus = itemFormDto.getItemSellStatus();
     }
-
 }
+
+//참고 자료 -> 백타불여일견 스프링부트와 쇼핑몰 with JPA 저자 변구훈님

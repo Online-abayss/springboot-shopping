@@ -23,4 +23,4 @@ public abstract class BaseEntity extends BaseTimeEntity{
 
 }
 
-// 왜 바로 member에 상속 안받고 여기다가 한번 걸쳐서 상속 받는지 이해안됨
+//참고 자료 -> 백타불여일견 스프링부트와 쇼핑몰 with JPA 저자 변구훈님
