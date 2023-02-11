@@ -3,6 +3,7 @@ package com.example.springboot_shopping.service;
 import com.example.springboot_shopping.dto.ItemFormDto;
 import com.example.springboot_shopping.dto.ItemImgDto;
 import com.example.springboot_shopping.dto.ItemSearchDto;
+import com.example.springboot_shopping.dto.MainItemDto;
 import com.example.springboot_shopping.entity.Item;
 import com.example.springboot_shopping.entity.ItemImg;
 import com.example.springboot_shopping.repository.ItemImgRepository;
@@ -91,6 +92,13 @@ public class ItemService {
 
         return itemRepository.getAdminItemPage(itemSearchDto, pageable);
     }
+
+    @Transactional(readOnly = true)
+    public Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
+
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
+    }
+
 }
 
 /*
