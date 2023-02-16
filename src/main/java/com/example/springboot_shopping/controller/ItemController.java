@@ -118,6 +118,14 @@ public class ItemController {
 
         return "item/itemMng";
     }
+
+    @GetMapping(value = "/item/{itemId}")
+    public String itemDtl(Model model, @PathVariable("itemId") Long itemId) {
+
+        ItemFormDto itemFormDto = itemService.getItemDtl(itemId);
+        model.addAttribute("item", itemFormDto);
+        return  "item/itemDtl";
+    }
 }
 /*
 상품을 등록하는 url을 ItemController 클래스에 추가합니다.
