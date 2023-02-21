@@ -58,6 +58,11 @@ public class Item extends BaseEntity{
 
         this.stockNumber = restStock;
     }
+
+    public void addStock(int stockNumber) {
+
+        this.stockNumber += stockNumber;
+    }
 }
 
 //참고 자료 -> 백타불여일견 스프링부트와 쇼핑몰 with JPA 저자 변구훈님

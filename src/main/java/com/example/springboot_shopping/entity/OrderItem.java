@@ -44,7 +44,10 @@ public class OrderItem extends BaseEntity{ //1
         return orderPrice * count;
     }
 
+    public void cancel() {
 
+        this.getItem().addStock(count);
+    }
 }
 
 /*

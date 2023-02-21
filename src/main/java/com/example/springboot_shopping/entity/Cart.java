@@ -22,6 +22,13 @@ public class Cart {
     @OneToOne(fetch = FetchType.LAZY)//1
     @JoinColumn(name = "member_id")//2
     private Member member;
+
+    public static Cart createCart(Member member) {
+
+        Cart cart = new Cart();
+        cart.setMember(member);
+        return cart;
+    }
 }
 
 //1 @OneToOne 어노테이션을 이용해 회원 엔티티와 일대일로 매핑을 합니다.
